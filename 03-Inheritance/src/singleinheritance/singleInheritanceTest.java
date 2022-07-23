@@ -3,7 +3,6 @@ package singleinheritance;
 public class SingleInheritanceTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		SingleInheritance si = new SingleInheritance();
 		si.m1();
 		System.out.println(si.getClass());
