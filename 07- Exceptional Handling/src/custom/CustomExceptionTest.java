@@ -1,14 +1,14 @@
-package throws_1;
+package custom;
 
-public class ThrowsDemo {
+public class CustomExceptionTest {
 	public static void main(String[] args) {
-		ThrowsDemo obj = new ThrowsDemo();
+		CustomExceptionTest obj = new CustomExceptionTest();
 		try {
 			int withDrawAmount = 5000;
 			System.out.println("Withdrawing: " + withDrawAmount);
 			obj.withdrawFromATM(withDrawAmount, 4538);
 			System.out.println("Amount Withdrawn");
-		} catch (RuntimeException ex) {
+		} catch (InsufficientFundsException ex) {
 			System.out.println("Exception Occurred. " + ex.getMessage());
 		}
 	}
@@ -16,8 +16,7 @@ public class ThrowsDemo {
 	void withdrawFromATM(int withDrawAmount, int accountNumber) {
 		int balance = getBalanceFromAccount(accountNumber);
 		if (withDrawAmount > balance) {
-			throw new RuntimeException("Division by zero");
-			
+			throw new InsufficientFundsException("No more funds in account");
 		} 
 	}
 	

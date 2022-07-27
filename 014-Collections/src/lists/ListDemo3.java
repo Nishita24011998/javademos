@@ -23,5 +23,5 @@ public class ListDemo3 {
 		secondList.addAll(list);
 		System.out.println(secondList);
 		
-
+	}
 	}
